@@ -12,7 +12,7 @@ html {
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 4fr;
     height: 100vh;
 }
 
@@ -21,13 +21,15 @@ html {
 
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 5rem;
 
     background-color: #1992d4;
     color: #fff;
 
-    padding: 1rem 0rem 0rem 1rem;
+    padding: 2rem 0rem 0rem 2rem;
     font-weight: bold;
+
+    font-size: 2rem;
 }
 
 a:link,
@@ -40,14 +42,20 @@ div > a,
 div > p {
     display: flex;
     gap: 1rem;
+    align-items: center;
 }
 
-svg {
-    height: 12px !important;
-    width: 12px !important;
+div > a > svg {
+    align-self: center;
+}
+
+p > svg {
+    height: 4rem !important;
+    width: 4rem !important;
 }
 
 .logo {
+    font-size: 3rem;
 }
 
 .sidebar-nav-links {
@@ -55,7 +63,7 @@ svg {
     flex-direction: column;
 
     justify-content: space-around;
-    gap: 0.8rem;
+    gap: 2rem;
 }
 
 .sidebar-option-link {
@@ -63,5 +71,65 @@ svg {
     flex-direction: column;
 
     justify-content: flex-start;
-    gap: 0.8rem;
+    gap: 2rem;
+}
+
+.header-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1.5fr;
+}
+
+.upper-content {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem 1rem 4rem;
+}
+
+.upper-content-left,
+.upper-content-right {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.upper-content-right {
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+.upper-content-left {
+    gap: 2rem;
+}
+
+.search-bar:focus {
+    outline: none;
+}
+
+.search-bar {
+    flex: 1;
+    border: none;
+    background-color: #e2e8f0;
+    height: 2.5rem;
+    border-radius: 100px;
+}
+
+.profile-pic {
+    height: 4rem;
+    width: 4rem;
+}
+
+.profile-name {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.lower-content {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem 1rem 4rem;
 }
