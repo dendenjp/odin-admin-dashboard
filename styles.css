@@ -234,6 +234,22 @@ p > svg {
     padding: 2rem 2.5rem;
 
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.158);
+
+    position: relative;
+}
+
+.card::before {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    content: ' ';
+    display: block;
+    background-color: #f0b429;
+    height: 100%;
+    width: 2.5%;
+    border-top-left-radius: 0.6rem;
+    border-bottom-left-radius: 0.6rem;
+    z-index: 999;
 }
 
 .card h1 {
@@ -268,7 +284,8 @@ p > svg {
     gap: 1rem;
 }
 
-.announcement-card {
+.announcement-card,
+.trending-card {
     background-color: #fff;
     display: grid;
     padding: 2rem 2rem 2rem 2rem;
@@ -276,6 +293,7 @@ p > svg {
     border-radius: 10px;
 
     row-gap: 2rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.158);
 }
 
 .announcement-card div {
@@ -286,6 +304,30 @@ p > svg {
 .trending-container {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-    background-color: cyan;
-    padding: 2rem 2rem 2rem 2rem;
+    /* background-color: cyan; */
+    padding: 3rem 3rem 3rem 3rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.profile-pic1 {
+    height: 6rem;
+    width: 6rem;
+}
+
+.trending-card {
+}
+
+.trending-card .profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    font-size: 1.5rem;
+}
+
+.trending-card .profile div h1 {
+    font-size: 2rem;
 }
